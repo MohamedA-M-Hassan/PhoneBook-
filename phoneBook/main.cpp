@@ -3,7 +3,6 @@
 #include "PhoneBook.h"
 using namespace std ;
 
-
 void main ()
 {
 	PhoneBook trial;
@@ -14,4 +13,8 @@ void main ()
 	//trial.removeUserByName("mohamed");
 	//trial.removeUserByName("mo"); // wrong test case: as fisrt element will be removed 
 	trial.removeWithValidationIfUserNotFound("mo");
+	//trial.updateByName ("Ahmed","Ahmed2","ahmed@gmail.com",0147);
+	//trial.updateByName ("hello","Ahmed3","ahmed@gmail.com",0147);
+
+
 }

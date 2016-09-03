@@ -19,6 +19,7 @@ public:
 	void removeUserByName(string name_);
 	void removeWithValidationIfUserNotFound(string name_);
 	int userFound (string name_);
+	void updateByName(string oldName , string newName ,string newMail,int newNum);
 
 };
 #endif
