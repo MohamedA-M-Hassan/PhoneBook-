@@ -16,7 +16,7 @@ public:
 
 	
 	void addUser(string name_ ,string mail_ ,int num);
-	
+	void removeUserByName(string name_);
 
 };
 #endif
