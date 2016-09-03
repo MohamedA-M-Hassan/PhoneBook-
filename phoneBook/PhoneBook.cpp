@@ -91,11 +91,19 @@ int PhoneBook::userFound(string name_) /* fisrt it was return boolean>
 }
 void PhoneBook::updateByName(string oldName, string newName ,string newMail,int newNum)
 {
-	if(userFound(oldName) != -1 )
+	// this will crash
+	/*if(userFound(oldName) != -1 )
 	{
 		name[userFound(oldName)]= newName;
 		mail[userFound(oldName)]= newMail;
 		number[userFound(oldName)]= newNum;
+	}*/
+	int indx= userFound(oldName);
+	if(indx != -1 )
+	{
+		name[indx]= newName;
+		mail[indx]= newMail;
+		number[indx]= newNum;
 	}
 	else cout << "this user does't exist"<<endl;
 }
