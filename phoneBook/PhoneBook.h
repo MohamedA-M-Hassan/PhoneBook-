@@ -18,8 +18,8 @@ public:
 	void addUser(string name_ ,string mail_ ,int num);
 	void removeUserByName(string name_);
 	void removeWithValidationIfUserNotFound(string name_);
-	int userFound (string name_);
+	int getUserIdByName (string name_);
 	void updateByName(string oldName , string newName ,string newMail,int newNum);
-
+	void checkMail(string mail_);
 };
 #endif

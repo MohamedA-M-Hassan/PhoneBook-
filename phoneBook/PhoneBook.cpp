@@ -67,7 +67,7 @@ void PhoneBook::removeWithValidationIfUserNotFound(string name_)
 	}
 	
 }
-int PhoneBook::userFound(string name_) /* fisrt it was return boolean> 
+int PhoneBook::getUserIdByName(string name_) /* fisrt it was return boolean> 
 										then if u use it in update for example
 										u will need to make another loop to get the index 
 										:so make them in only one loop */
@@ -92,13 +92,13 @@ int PhoneBook::userFound(string name_) /* fisrt it was return boolean>
 void PhoneBook::updateByName(string oldName, string newName ,string newMail,int newNum)
 {
 	// this will crash
-	/*if(userFound(oldName) != -1 )
+	/*if(getUserIdByName(oldName) != -1 )
 	{
-		name[userFound(oldName)]= newName;
-		mail[userFound(oldName)]= newMail;
-		number[userFound(oldName)]= newNum;
+		name[getUserIdByName(oldName)]= newName;
+		mail[getUserIdByName(oldName)]= newMail;
+		number[getUserIdByName(oldName)]= newNum;
 	}*/
-	int indx= userFound(oldName);
+	int indx= getUserIdByName(oldName);
 	if(indx != -1 )
 	{
 		name[indx]= newName;
@@ -106,5 +106,40 @@ void PhoneBook::updateByName(string oldName, string newName ,string newMail,int 
 		number[indx]= newNum;
 	}
 	else cout << "this user does't exist"<<endl;
+}
+bool PhoneBook::checkMail(string mail_)
+{
+	
+	
+		if (mail_ == "")
+		{
+			return false;
+		}
+		int atPos = -1;
+		int dotPos = -1;
+		for (int i = 0, len = mail_.length(); i < len; i++)
+		{
+			if (mail[i] == '@')
+			{
+				atPos = i;
+			}
+			else if (mail[i] == '.')
+			{
+				dotPos = i;
+			}
+		}
+		if (atPos == -1 || dotPos == -1)
+		{
+			return false;
+		}
+		if (atPos < 1 || dotPos < atPos + 2 || dotPos == mail.length() - 1)
+		{
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+		
 }
 
