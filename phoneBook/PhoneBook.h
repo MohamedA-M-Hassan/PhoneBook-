@@ -18,7 +18,7 @@ public:
 	void addUser(string name_ ,string mail_ ,int num);
 	void removeUserByName(string name_);
 	void removeWithValidationIfUserNotFound(string name_);
-
+	int userFound (string name_);
 
 };
 #endif

@@ -10,6 +10,7 @@ void main ()
 	trial.addUser("Ahmed","ane@gmail.com",123);
 	trial.addUser("mohamed","hello@gmail.com",12345);
 	trial.addUser("mohamed2","hello@gmail.com",12345);
+	int x=trial.userFound("moh");
 	//trial.removeUserByName("mohamed");
 	//trial.removeUserByName("mo"); // wrong test case: as fisrt element will be removed 
 	trial.removeWithValidationIfUserNotFound("mo");

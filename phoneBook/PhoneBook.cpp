@@ -67,3 +67,26 @@ void PhoneBook::removeWithValidationIfUserNotFound(string name_)
 	}
 	
 }
+int PhoneBook::userFound(string name_) /* fisrt it was return boolean> 
+										then if u use it in update for example
+										u will need to make another loop to get the index 
+										:so make them in only one loop */
+{
+	int index_ =-1;  
+	//bool flag=false;
+	for (int i = 0; i < index; i++)
+	{
+		if (name[i]==name_) 
+		{
+			//flag = true;
+			//break;
+			//return true;
+			index_=i;
+			break;
+		}
+	}
+	// return flag;
+	//return false;
+	return index_; // if -1 > not found || else > found
+}
+
