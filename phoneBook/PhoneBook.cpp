@@ -117,13 +117,13 @@ bool PhoneBook::checkMail(string mail_)
 		}
 		int atPos = -1;
 		int dotPos = -1;
-		for (int i = 0, len = mail_.length(); i < len; i++)
+		for (int i = 0; i < mail_.length(); i++)
 		{
-			if (mail[i] == '@')
+			if (mail_[i] == '@')
 			{
 				atPos = i;
 			}
-			else if (mail[i] == '.')
+			else if (mail_[i] == '.')
 			{
 				dotPos = i;
 			}
@@ -132,7 +132,7 @@ bool PhoneBook::checkMail(string mail_)
 		{
 			return false;
 		}
-		if (atPos < 1 || dotPos < atPos + 2 || dotPos == mail.length() - 1)
+		if (atPos < 1 || dotPos < atPos + 2 || dotPos == mail_.length() - 1)
 		{
 			return false;
 		}

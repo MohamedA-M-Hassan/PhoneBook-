@@ -20,6 +20,6 @@ public:
 	void removeWithValidationIfUserNotFound(string name_);
 	int getUserIdByName (string name_);
 	void updateByName(string oldName , string newName ,string newMail,int newNum);
-	void checkMail(string mail_);
+	bool checkMail(string mail_);
 };
 #endif
